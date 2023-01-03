@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Password Generator</title>
+	<script type="text/javascript">
+		var characterList="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-*/`~!@#$%^&*()_+-]}[{;:'/?.>,<", password=[];
+		for(var i=1;i<=9;i++){
+			randomNumber=Math.floor(Math.random()*characterList.length)
+			password.push(characterList.charAt(randomNumber))
+		}
+		console.log("Random password : ")
+		console.log(password)
+		let newpassword = password.filter((c, i) =>password.indexOf(c) === i );
+ 		console.log(newpassword);
+		var finalResult=newpassword.join(" ")
+		console.log("Random password with repetitive characters removed : ")
+		console.log(finalResult)
+		alert("Random Password is : "+finalResult)
+	</script>
+</head>
+<body>
+	<h1>Random 9 Character Password Generator Using JavaScript</h1> <br/>
+	<h2>Refresh the page to see another password</h2>
+	<h3>Go to Console to see the Program </h3>
+</body>
+</html>
